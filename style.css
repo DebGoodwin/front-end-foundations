@@ -1,11 +1,5 @@
 
 
-/* 
- section {
-  border: 1px solid red;
-}*/
-
-
 /* --- General styles using mobile first design --- */
 .container {
   display: flex;
@@ -15,17 +9,17 @@
 }
 
 body {
-  /*margin: 10px;*/
   font-family: Verdana, Geneva, Tahoma, sans-serif, sans-serif;
-  font-size: larger;
 }
+
 main {
   padding: 20px 0;
 }
+
 header {
   background-color: #403933;
   font-family: 'Courier New', Courier, monospace;
-  height: 175px;
+  height: 150px;
   margin-bottom: 40px;
 }
 
@@ -49,6 +43,8 @@ header nav ul {
   display: flex;
   flex-direction: row;
   padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 8px;
 }
 
 header nav ul li {
@@ -58,13 +54,15 @@ header nav ul li {
 header nav ul li a {
   color: white;
   text-decoration: none;
-  padding: 0 20px 0 0;
+  padding: 0 8px;
 }
 
 header nav ul li:last-child a {
   margin-right: 0;
 }
 
+
+/* --- Image styles --- */
 main img {
   width: 100%;
 }
@@ -77,14 +75,24 @@ img.image-radius {
   border-radius: 8px;
 }
 
+.projects img {
+  box-shadow: 2.8px 5.6px 5.6px hsl(0deg 0% 0% / 0.41);
+  height: 320px;
+  border-radius: 4px;
+}
+
+.projects {
+  font-size: small;
+}
+
+/* --- Main styles --- */
 section {
   padding: 2% 10%;
 }
+
 h2 {
-  font-size: 26px;
-  font-weight: 400;
-  color: #403933;
-  
+  font-size: 19px;
+  font-weight: 500;
   margin: 0; 
 }
 
@@ -92,9 +100,6 @@ h3 {
   font-size: 18px;
   font-weight: 500;
 }
-/*section {
-  margin-bottom: 20px;
-}*/
 
 section.alt-bkground {
   background-color: darkgray;
@@ -118,13 +123,14 @@ main a {
   text-decoration: none;
 }
 
-
+iframe {
+  width: 100%;
+}
 
 footer {
   text-align: center;
   padding: 20px;
   color: #403933;
-  /*background-color:#c5c0b8;*/
 }
 
 
@@ -132,6 +138,8 @@ footer {
 
 @media all and (min-width: 700px) {
   
+  /* --- Header --- */
+
   header {
     display: flex;
     justify-content: space-between;
@@ -153,32 +161,25 @@ footer {
 
   /* --- Main groups --- */
 
- 
-
   h1 {
     font-size: 28px;
     font-weight: 400;
     color: #403933;
-    
   }
 
   h2 {
     font-size: 26px;
     font-weight: 400;
     color: #403933;
-    
     margin: 0;
-    
   }
-
-  
 
   p {
     line-height: 1.5em;
   }
 
- 
-
+  
+  /* --- Link styles --- */
   main  a:link { color: darkslateblue; }
   main  a:visited { color: darkblue; }
   main  a:hover { color: #403933; }
@@ -186,7 +187,7 @@ footer {
   a:hover { text-decoration: underline;	}
 
   
- 
+ /* --- styles for the sections --- */
   .group {
     display: flex;
     flex-direction: row;
